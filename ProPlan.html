@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProPlan</title><link rel="icon" type="image/svg+xml" href="icon.svg">
+<link href="style.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <svg class="logo" viewBox="0 0 24 24">
+      <path d="M21,11.5A8.5,8.5 0 0,1 12.5,20A8.5,8.5 0 0,1 4,11.5A8.5,8.5 0 0,1 12.5,3A8.5,8.5 0 0,1 21,11.5M12.5,5C8.91,5 6,7.91 6,11.5C6,15.09 8.91,18 12.5,18C16.09,18 19,15.09 19,11.5C19,7.91 16.09,5 12.5,5M12.5,7A4.5,4.5 0 0,1 17,11.5A4.5,4.5 0 0,1 12.5,16A4.5,4.5 0 0,1 8,11.5A4.5,4.5 0 0,1 12.5,7Z" />
+    </svg>
+    <h1>ProPlan</h1>
+    <p>Productivity Suite</p>
+  </header>
+
+  <div class="welcome-banner">
+    <h3>Welcome to ProPlan</h3>
+    <p>Your all-in-one productivity solution</p>
+  </div>
+
+  <div class="menu">
+    <div class="card premium-feature" id="calendarCard">
+      <div class="premium-badge">★</div>
+      <svg class="card-icon" viewBox="0 0 24 24">
+        <path d="M19,4H18V2H16V4H8V2H6V4H5A2,2 0 0,0 3,6V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V6A2,2 0 0,0 19,4M19,20H5V10H19V20M19,8H5V6H19V8Z" />
+      </svg>
+      <h3>Smart Calendar</h3>
+      <p>Powered Scheduling</p>
+    </div>
+    <div class="card premium-feature" id="todoCard">
+      <div class="premium-badge">★</div>
+      <svg class="card-icon" viewBox="0 0 24 24">
+        <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9" />
+      </svg>
+      <h3>Priority Tasks</h3>
+      <p>Smart Task Management</p>
+    </div>
+    <div class="card premium-feature" id="habitCard">
+      <div class="premium-badge">★</div>
+      <svg class="card-icon" viewBox="0 0 24 24">
+        <path d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7Z" />
+      </svg>
+      <h3>Habit Analytics</h3>
+      <p>Advanced Tracking</p>
+    </div>
+    <div class="card premium-feature" id="statsCard">
+      <div class="premium-badge">★</div>
+      <svg class="card-icon" viewBox="0 0 24 24">
+        <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M9,17H7V10H9V17M13,17H11V7H13V17M17,17H15V13H17V17Z" />
+      </svg>
+      <h3>Insights</h3>
+      <p>Performance Analytics</p>
+    </div>
+  </div>
+
+  <div class="calendar">
+    <div class="calendar-header">
+      <button class="calendar-nav" id="prevMonth">&lt;</button>
+      <h2 id="currentMonth">September 2023</h2>
+      <button class="calendar-nav" id="nextMonth">&gt;</button>
+    </div>
+    <div class="calendar-grid">
+      <div class="weekday">Sun</div>
+      <div class="weekday">Mon</div>
+      <div class="weekday">Tue</div>
+      <div class="weekday">Wed</div>
+      <div class="weekday">Thu</div>
+      <div class="weekday">Fri</div>
+      <div class="weekday">Sat</div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js">
+</script>
+</body></html>

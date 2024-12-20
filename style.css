@@ -1,0 +1,275 @@
+﻿
+:root {
+  --primary-purple: #C8B6E2;
+  --secondary-purple: #A192C8;
+  --light-purple: #E9E1F9;
+  --dark-purple: #6B5B95;
+  --white: #FFFFFF;
+  --shadow: rgba(107, 91, 149, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--light-purple), var(--primary-purple));
+  color: var(--dark-purple);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 414px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  min-height: 100vh;
+  box-shadow: 0 0 40px var(--shadow);
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  fill: var(--dark-purple);
+  margin-bottom: 10px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px var(--shadow);
+  border: 1px solid var(--light-purple);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--shadow);
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  fill: var(--dark-purple);
+  margin-bottom: 10px;
+}
+
+.calendar {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-nav {
+  background: var(--light-purple);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: var(--dark-purple);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.calendar-nav:hover {
+  background: var(--primary-purple);
+  transform: scale(1.1);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.weekday {
+  text-align: center;
+  font-weight: 500;
+  padding: 5px;
+  color: var(--secondary-purple);
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-purple);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.calendar-day:hover {
+  background: var(--primary-purple);
+  transform: scale(1.05);
+}
+
+.calendar-day.active {
+  background: var(--secondary-purple);
+  color: var(--white);
+}
+
+.calendar-day.has-events::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  width: 4px;
+  height: 4px;
+  background: var(--dark-purple);
+  border-radius: 50%;
+}
+
+h1, h2 {
+  color: var(--dark-purple);
+  font-weight: 600;
+}
+
+h3 {
+  color: var(--dark-purple);
+  margin: 10px 0;
+}
+
+p {
+  color: var(--secondary-purple);
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.premium-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.welcome-banner {
+  background: linear-gradient(135deg, var(--dark-purple), var(--secondary-purple));
+  color: var(--white);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.premium-feature {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-feature::before {
+  content: '✨';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+}
+
+.stats-highlight {
+  background: linear-gradient(135deg, var(--light-purple), var(--white));
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.loading {
+  position: relative;
+  opacity: 0.7;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--light-purple);
+  border-top-color: var(--dark-purple);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.tooltip {
+  position: fixed;
+  background: var(--dark-purple);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8em;
+  pointer-events: none;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-bottom-color: var(--dark-purple);
+}
+
+.task-item.dragging {
+  opacity: 0.5;
+  cursor: move;
+}
+
+.calendar-day.drag-over {
+  background: var(--secondary-purple);
+  color: var(--white);
+  transform: scale(1.1);
+}
